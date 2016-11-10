@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/lib/zabbix/scripts/cloudwatch.metric --interval $1 --metric $2 --namespace $3 --statistic $4 --region $5 --dimension $6 --account $7
