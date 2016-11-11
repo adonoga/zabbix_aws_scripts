@@ -80,7 +80,8 @@ class Discoverer:
         data = list()
         for balancer in response["LoadBalancerDescriptions"]:
             ldd = {
-                    "{#BALANCER_NAME}": balancer["LoadBalancerName"]
+                    "{#BALANCER_NAME}":      balancer["LoadBalancerName"],
+                    "{#INSTANCES_COUNT}":    len(balancer["Instances"])
             }
             data.append(ldd)
         return data
